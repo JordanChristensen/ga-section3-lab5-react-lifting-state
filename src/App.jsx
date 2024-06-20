@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 import { addTopping, removeTopping } from "./utils/manageBurgerToppings";
-import BurgerToppings from "./components/BurgerToppings";
-import AvailableIngredients from "./components/AvailableIngredients";
+import BurgerToppings from "./components/burger-toppings/BurgerToppings";
+import AvailableIngredients from "./components/available-ingredients/AvailableIngredients";
 import { ingredientsData } from "./data/ingredientsData";
 
 const App = () => {

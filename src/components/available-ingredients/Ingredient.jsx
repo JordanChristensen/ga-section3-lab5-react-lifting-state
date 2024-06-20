@@ -7,7 +7,7 @@ const Ingredient = ({ ingredient }) => {
   return (
     <li style={style}>
       {ingredient.name}
-      <AddToppingForm />
+      <AddToppingForm ingredient={ingredient} />
     </li>
   );
 };
