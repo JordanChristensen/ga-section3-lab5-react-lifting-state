@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import BurgerStack from "./components/BurgerStack";
+import IngredientList from "./components/IngredientList";
+import { AvailableIngredients } from "./data/AvailableIngredients";
+import {
+  addIngredientToBurger,
+  removeIngredientFromBurger,
+} from "./utils/manageBurgerIngredients";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [ingredientList, setIngredientList] = useState(AvailableIngredients);
+  const [burgerStack, setBurgerStack] = useState([]);
+
+  const handleAddIngredientToBurger = (ingredientToAdd) => {
+    addIngredientToBurger(
+      ingredientToAdd,
+      burgerStack,
+      setBurgerStack,
+      ingredientList,
+      setIngredientList
+    );
+  };
+
+  const handleRemoveIngredientFromBurger = (ingredientToRemove) => {
+    removeIngredientFromBurger(
+      ingredientToRemove,
+      burgerStack,
+      setBurgerStack,
+      ingredientList,
+      setIngredientList
+    );
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <main>
+      <h1>Burger Stacker</h1>
+      <section id="burger-customizer">
+        <IngredientList
+          handleAddIngredientToBurger={handleAddIngredientToBurger}
+        />
+        <BurgerStack
+          handleRemoveIngredientFromBurger={handleRemoveIngredientFromBurger}
+        />
+      </section>
+    </main>
+  );
+};
 
-export default App
+export default App;
