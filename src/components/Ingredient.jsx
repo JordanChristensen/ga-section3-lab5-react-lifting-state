@@ -1,5 +1,15 @@
+import AddToppingForm from "./AddToppingForm";
+
 const Ingredient = ({ ingredient }) => {
-  return <li>{ingredient.name}</li>;
+  const style = {
+    backgroundColor: ingredient.color,
+  };
+  return (
+    <li style={style}>
+      {ingredient.name}
+      <AddToppingForm />
+    </li>
+  );
 };
 
 export default Ingredient;
