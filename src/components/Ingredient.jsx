@@ -1,5 +1,5 @@
-const Ingredient = () => {
-  return <li>ingredient</li>;
+const Ingredient = ({ ingredient }) => {
+  return <li>{ingredient.name}</li>;
 };
 
 export default Ingredient;
