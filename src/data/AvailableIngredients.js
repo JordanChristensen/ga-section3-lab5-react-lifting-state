@@ -1,0 +1,16 @@
+export const AvailableIngredients = [
+  { _id: 1, name: "Kaiser Bun", color: "saddlebrown" },
+  { _id: 2, name: "Sesame Bun", color: "sandybrown" },
+  { _id: 3, name: "Gluten Free Bun", color: "peru" },
+  { _id: 4, name: "Lettuce Wrap", color: "olivedrab" },
+  { _id: 5, name: "Beef Patty", color: "#3F250B" },
+  { _id: 6, name: "Soy Patty", color: "#3F250B" },
+  { _id: 7, name: "Black Bean Patty", color: "#3F250B" },
+  { _id: 8, name: "Chicken Patty", color: "burlywood" },
+  { _id: 9, name: "Lettuce", color: "lawngreen" },
+  { _id: 10, name: "Tomato", color: "tomato" },
+  { _id: 11, name: "Bacon", color: "maroon" },
+  { _id: 12, name: "Onion", color: "lightyellow" },
+  { _id: 13, name: "Cheddar Cheese", color: "#FDE18B" },
+  { _id: 14, name: "Swiss Cheese", color: "#F1E1A8" },
+];
