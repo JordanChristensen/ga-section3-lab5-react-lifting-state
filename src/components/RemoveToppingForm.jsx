@@ -5,7 +5,7 @@ const RemoveToppingForm = () => {
   };
   return (
     <form>
-      <button onClick={(e) => handleSubmit(e)}>&#45;</button>
+      <button onClick={(e) => handleSubmit(e)}>&#88;</button>
     </form>
   );
 };

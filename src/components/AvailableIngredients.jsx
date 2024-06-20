@@ -2,7 +2,7 @@ import Ingredient from "./Ingredient";
 
 const AvailableIngredients = ({ availableIngredients, handleAddTopping }) => {
   return (
-    <section>
+    <section id="available-ingredients">
       <h2>Available ingredients</h2>
       {availableIngredients.length === 0 ? (
         "Sorry, there are no ingredients left to select from. Bon apetit!"

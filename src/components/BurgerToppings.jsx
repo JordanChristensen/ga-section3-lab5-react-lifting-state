@@ -2,7 +2,7 @@ import Topping from "./Topping";
 
 const BurgerToppings = ({ burgerToppings, handleRemoveTopping }) => {
   return (
-    <section>
+    <section id="burger-toppings">
       <h2>Burger toppings</h2>
       {burgerToppings.length === 0 ? (
         "This is a very plain burger, add toppings?"
