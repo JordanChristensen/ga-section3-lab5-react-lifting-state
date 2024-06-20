@@ -4,7 +4,7 @@ import { addTopping, removeTopping } from "./utils/manageBurgerToppings";
 import BurgerToppings from "./components/BurgerToppings";
 import AvailableIngredients from "./components/AvailableIngredients";
 import { ingredientsData } from "./data/ingredientsData";
-import Ingredient from "./components/Ingredient";
+// import Ingredient from "./components/Ingredient";
 
 const App = () => {
   const [availableIngredients, setAvailableIngredients] =
@@ -36,7 +36,7 @@ const App = () => {
       <h1>Burger shack</h1>
       <section id="burger-customizer">
         <AvailableIngredients
-          Ingredient={Ingredient}
+          availableIngredients={availableIngredients}
           handleAddBurgerTopping={handleAddBurgerTopping}
         />
         <BurgerToppings handleRemoveBurgerTopping={handleRemoveBurgerTopping} />

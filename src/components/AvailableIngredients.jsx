@@ -1,13 +1,22 @@
 import Ingredient from "./Ingredient";
 
-const AvailableIngredients = ({ handleAddTopping }) => {
+const AvailableIngredients = ({ availableIngredients, handleAddTopping }) => {
   return (
-    // map through props.ingredients
-    <section id="available-ingredients">
+    <section>
       <h2>Available ingredients</h2>
-      <ul>
-        <Ingredient handleAddTopping={handleAddTopping} />
-      </ul>
+      {availableIngredients.length === 0 ? (
+        "Sorry, there are no ingredients left to select from. Bon apetit!"
+      ) : (
+        <ul>
+          {availableIngredients.map((ingredient) => (
+            <Ingredient
+              key={ingredient._id}
+              ingredient={ingredient}
+              handleAddTopping={handleAddTopping}
+            />
+          ))}
+        </ul>
+      )}
     </section>
   );
 };
