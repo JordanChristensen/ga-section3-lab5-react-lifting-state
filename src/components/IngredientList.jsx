@@ -1,9 +1,12 @@
-const IngredientList = ({
-  handleAddIngredientToBurger,
-}) => {
+import Ingredient from "./Ingredient";
+
+const IngredientList = ({ handleAddIngredientToBurger }) => {
   return (
-    <ul></ul>
     // map through props.ingredients
+    <section>
+      <ul></ul>
+      <Ingredient handleAddIngredientToBurger={handleAddIngredientToBurger} />
+    </section>
   );
 };
 

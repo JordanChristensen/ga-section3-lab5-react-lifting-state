@@ -1,13 +1,13 @@
 import Ingredient from "./Ingredient";
 
-const BurgerStack = ({
-  handleRemoveIngredientFromBurger,
-}) => {
+const BurgerStack = ({ handleRemoveIngredientFromBurger }) => {
   return (
     // map through props.ingredients
     <section>
       <ul></ul>
-      <Ingredient />
+      <Ingredient
+        handleRemoveIngredientFromBurger={handleRemoveIngredientFromBurger}
+      />
     </section>
   );
 };
