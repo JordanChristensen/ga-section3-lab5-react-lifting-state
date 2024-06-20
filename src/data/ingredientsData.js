@@ -1,4 +1,4 @@
-export const AvailableIngredients = [
+export const ingredientsData = [
   { _id: 1, name: "Kaiser Bun", color: "saddlebrown" },
   { _id: 2, name: "Sesame Bun", color: "sandybrown" },
   { _id: 3, name: "Gluten Free Bun", color: "peru" },

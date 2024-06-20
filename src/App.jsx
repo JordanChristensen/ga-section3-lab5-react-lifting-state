@@ -1,47 +1,45 @@
-import { useState } from "react";
 import "./App.css";
-import BurgerStack from "./components/BurgerStack";
-import IngredientList from "./components/IngredientList";
-import { AvailableIngredients } from "./data/AvailableIngredients";
-import {
-  addIngredientToBurger,
-  removeIngredientFromBurger,
-} from "./utils/manageBurgerIngredients";
+import { useState } from "react";
+import { addTopping, removeTopping } from "./utils/manageBurgerToppings";
+import BurgerToppings from "./components/BurgerToppings";
+import AvailableIngredients from "./components/AvailableIngredients";
+import { ingredientsData } from "./data/ingredientsData";
+import Ingredient from "./components/Ingredient";
 
 const App = () => {
-  const [ingredientList, setIngredientList] = useState(AvailableIngredients);
-  const [burgerStack, setBurgerStack] = useState([]);
+  const [availableIngredients, setAvailableIngredients] =
+    useState(ingredientsData);
+  const [burgerToppings, setBurgerToppings] = useState([]);
 
-  const handleAddIngredientToBurger = (ingredientToAdd) => {
-    addIngredientToBurger(
+  const handleAddBurgerTopping = (ingredientToAdd) => {
+    addTopping(
       ingredientToAdd,
-      burgerStack,
-      setBurgerStack,
-      ingredientList,
-      setIngredientList
+      burgerToppings,
+      setBurgerToppings,
+      availableIngredients,
+      setAvailableIngredients
     );
   };
 
-  const handleRemoveIngredientFromBurger = (ingredientToRemove) => {
-    removeIngredientFromBurger(
+  const handleRemoveBurgerTopping = (ingredientToRemove) => {
+    removeTopping(
       ingredientToRemove,
-      burgerStack,
-      setBurgerStack,
-      ingredientList,
-      setIngredientList
+      burgerToppings,
+      setBurgerToppings,
+      availableIngredients,
+      setAvailableIngredients
     );
   };
 
   return (
     <main>
-      <h1>Burger Stacker</h1>
+      <h1>Burger shack</h1>
       <section id="burger-customizer">
-        <IngredientList
-          handleAddIngredientToBurger={handleAddIngredientToBurger}
+        <AvailableIngredients
+          Ingredient={Ingredient}
+          handleAddBurgerTopping={handleAddBurgerTopping}
         />
-        <BurgerStack
-          handleRemoveIngredientFromBurger={handleRemoveIngredientFromBurger}
-        />
+        <BurgerToppings handleRemoveBurgerTopping={handleRemoveBurgerTopping} />
       </section>
     </main>
   );

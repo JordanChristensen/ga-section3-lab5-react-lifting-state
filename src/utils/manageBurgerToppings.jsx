@@ -1,4 +1,4 @@
-export const addIngredientToBurger = (
+export const addTopping = (
   ingredientToAdd,
   burgerStack,
   setBurgerStack,
@@ -12,7 +12,7 @@ export const addIngredientToBurger = (
   setIngredientList(updatedIngredientList);
 };
 
-export const removeIngredientFromBurger = (
+export const removeTopping = (
   ingredientToRemove,
   burgerStack,
   setBurgerStack,
