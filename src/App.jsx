@@ -4,7 +4,6 @@ import { addTopping, removeTopping } from "./utils/manageBurgerToppings";
 import BurgerToppings from "./components/BurgerToppings";
 import AvailableIngredients from "./components/AvailableIngredients";
 import { ingredientsData } from "./data/ingredientsData";
-// import Ingredient from "./components/Ingredient";
 
 const App = () => {
   const [availableIngredients, setAvailableIngredients] =
