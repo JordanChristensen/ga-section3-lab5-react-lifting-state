@@ -39,7 +39,10 @@ const App = () => {
           availableIngredients={availableIngredients}
           handleAddBurgerTopping={handleAddBurgerTopping}
         />
-        <BurgerToppings handleRemoveBurgerTopping={handleRemoveBurgerTopping} />
+        <BurgerToppings
+          burgerToppings={burgerToppings}
+          handleRemoveBurgerTopping={handleRemoveBurgerTopping}
+        />
       </section>
     </main>
   );

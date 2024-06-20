@@ -1,17 +1,24 @@
-import Ingredient from "./Ingredient";
+import Topping from "./Topping";
 
-const BurgerIngredients = ({ handleRemoveTopping }) => {
+const BurgerToppings = ({ burgerToppings, handleRemoveTopping }) => {
   return (
-    // map through props.ingredients
-    <section id="burger-ingredients">
-      <h2>Burger ingredients</h2>
-      <ul>
-        <Ingredient
-          handleRemoveTopping={handleRemoveTopping}
-        />
-      </ul>
+    <section>
+      <h2>Burger toppings</h2>
+      {burgerToppings.length === 0 ? (
+        "This is a very plain burger, add toppings?"
+      ) : (
+        <ul>
+          {burgerToppings.map((topping) => (
+            <Topping
+              key={topping._id}
+              topping={topping}
+              handleRemoveTopping={handleRemoveTopping}
+            />
+          ))}
+        </ul>
+      )}
     </section>
   );
 };
 
-export default BurgerIngredients;
+export default BurgerToppings;
