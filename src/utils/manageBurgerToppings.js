@@ -3,7 +3,16 @@ export const addTopping = (
   burgerToppings,
   setBurgerToppings
 ) => {
-  setBurgerToppings([...burgerToppings], ingredientToAdd);
+  // console.log(ingredientToAdd);
+  //
+  //
+  //
+  // -----------> WORKING below HERE ----------------
+  //
+  // ingredientToAdd.Properties needs to be assigned to topping.Properties?
+  //
+  setBurgerToppings([...burgerToppings, { ingredientToAdd }]);
+  // console.log(burgerToppings);
 };
 
 export const removeTopping = (
@@ -17,5 +26,5 @@ export const removeTopping = (
     (ingredient) => ingredient._id !== ingredientToRemove._id
   );
   setBurgerToppings(updatedBurgerToppings);
-  setAvailableIngredients([...availableIngredients], ingredientToRemove);
+  setAvailableIngredients([...availableIngredients, ingredientToRemove]);
 };

@@ -1,6 +1,6 @@
 const AddToppingForm = ({ ingredient, handleAddTopping }) => {
   const handleSubmit = () => {
-    console.log(`${ingredient.name} has the ID# ${ingredient._id}`);
+    // console.log(`${ingredient.name} has the ID# ${ingredient._id}`);
     handleAddTopping(ingredient);
   };
   return (

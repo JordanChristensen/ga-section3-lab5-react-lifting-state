@@ -11,10 +11,11 @@ const App = () => {
   const [burgerToppings, setBurgerToppings] = useState([]);
 
   const handleAddTopping = (ingredientToAdd) => {
+    // console.log(ingredientToAdd);
     addTopping(ingredientToAdd, burgerToppings, setBurgerToppings);
   };
 
-  // review naming
+  // review naming of all
   const handleRemoveBurgerTopping = (ingredientToRemove) => {
     removeTopping(
       ingredientToRemove,

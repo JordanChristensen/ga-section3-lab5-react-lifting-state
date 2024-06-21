@@ -5,7 +5,7 @@ const AvailableIngredients = ({ availableIngredients, handleAddTopping }) => {
     <section id="available-ingredients">
       <h2>Available ingredients</h2>
       {availableIngredients.length === 0 ? (
-        "Sorry, there are no ingredients left to select from. Bon apetit!"
+        "Sorry, there are no ingredients left to select from. We've already ordered more!"
       ) : (
         <ul>
           {availableIngredients.map((ingredient) => (
