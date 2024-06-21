@@ -1,17 +1,9 @@
 export const addTopping = (
   ingredientToAdd,
   burgerToppings,
-  setBurgerToppings,
-  availableIngredients,
-  setAvailableIngredients
+  setBurgerToppings
 ) => {
   setBurgerToppings([...burgerToppings], ingredientToAdd);
-  const updatedAvailableIngredients = availableIngredients.filter(
-    (ingredient) => {
-      ingredient._id !== ingredientToAdd._id;
-    }
-  );
-  setAvailableIngredients(updatedAvailableIngredients);
 };
 
 export const removeTopping = (
