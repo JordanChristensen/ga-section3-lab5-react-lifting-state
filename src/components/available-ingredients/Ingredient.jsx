@@ -1,13 +1,16 @@
 import AddToppingForm from "./AddToppingForm";
 
-const Ingredient = ({ ingredient }) => {
+const Ingredient = ({ ingredient, handleAddTopping }) => {
   const style = {
     backgroundColor: ingredient.color,
   };
   return (
     <li style={style}>
       {ingredient.name}
-      <AddToppingForm ingredient={ingredient} />
+      <AddToppingForm
+        handleAddTopping={handleAddTopping}
+        ingredient={ingredient}
+      />
     </li>
   );
 };

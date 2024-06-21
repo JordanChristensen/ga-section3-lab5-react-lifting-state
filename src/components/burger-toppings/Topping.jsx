@@ -1,6 +1,6 @@
 import RemoveToppingForm from "./RemoveToppingForm";
 
-const Topping = ({ topping }) => {
+const Topping = ({ topping, handleRemoveTopping }) => {
   const style = {
     backgroundColor: topping.color,
   };
@@ -8,7 +8,10 @@ const Topping = ({ topping }) => {
   return (
     <li style={style}>
       {topping.name}
-      <RemoveToppingForm />
+      <RemoveToppingForm
+        handleAddTopping={handleRemoveTopping}
+        topping={topping}
+      />
     </li>
   );
 };
