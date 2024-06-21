@@ -10,16 +10,11 @@ const App = () => {
     useState(ingredientsData);
   const [burgerToppings, setBurgerToppings] = useState([]);
 
-  const handleAddBurgerTopping = (ingredientToAdd) => {
-    addTopping(
-      ingredientToAdd,
-      burgerToppings,
-      setBurgerToppings,
-      availableIngredients,
-      setAvailableIngredients
-    );
+  const handleAddTopping = (ingredientToAdd) => {
+    addTopping(ingredientToAdd, burgerToppings, setBurgerToppings);
   };
 
+  // review naming
   const handleRemoveBurgerTopping = (ingredientToRemove) => {
     removeTopping(
       ingredientToRemove,
@@ -36,7 +31,7 @@ const App = () => {
       <section id="burger-customizer">
         <AvailableIngredients
           availableIngredients={availableIngredients}
-          handleAddBurgerTopping={handleAddBurgerTopping}
+          handleAddTopping={handleAddTopping}
         />
         <BurgerToppings
           burgerToppings={burgerToppings}

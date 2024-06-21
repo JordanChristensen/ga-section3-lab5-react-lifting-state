@@ -1,15 +1,8 @@
 const RemoveToppingForm = ({ topping }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // alert(`${topping.name} clicked!`);
+  const handleSubmit = () => {
+    console.log(`${topping.name} has the ID# ${topping._id}`);
   };
-  return (
-    <form>
-      <button name={topping.name} onClick={(e) => handleSubmit(e)}>
-        &#88;
-      </button>
-    </form>
-  );
+  return <button onClick={(topping) => handleSubmit(topping)}>&#88;</button>;
 };
 
 export default RemoveToppingForm;

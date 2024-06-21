@@ -1,14 +1,10 @@
-const AddToppingForm = ({ ingredient }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // alert(`${ingredient.name} clicked!`);
+const AddToppingForm = ({ ingredient, handleAddTopping }) => {
+  const handleSubmit = () => {
+    console.log(`${ingredient.name} has the ID# ${ingredient._id}`);
+    handleAddTopping(ingredient);
   };
   return (
-    <form>
-      <button name={ingredient.name} onClick={(e) => handleSubmit(e)}>
-        &#43;
-      </button>
-    </form>
+    <button onClick={(ingredient) => handleSubmit(ingredient)}>&#43;</button>
   );
 };
 
