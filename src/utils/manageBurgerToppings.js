@@ -8,7 +8,7 @@ export async function addTopping(topping, burgerToppings, setBurgerToppings) {
     }
   } catch (addToppingError) {
     console.log(
-      `Error when sending adding ${topping} to burger ----->`,
+      `Error when adding ${topping} to burger ----->`,
       addToppingError
     );
   }
@@ -26,7 +26,7 @@ export async function removeTopping(
     await setBurgerToppings([...updatedBurgerToppings]);
   } catch (removeToppingError) {
     console.log(
-      `Error when sending removing ${ingredientToRemove} from burger ----->`,
+      `Error when removing ${ingredientToRemove} from burger ----->`,
       removeToppingError
     );
   }
