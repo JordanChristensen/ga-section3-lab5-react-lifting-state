@@ -4,7 +4,7 @@ const Topping = ({ topping, handleRemoveTopping }) => {
   const style = {
     backgroundColor: topping.color,
   };
-
+  // console.log(topping);
   return (
     <li style={style}>
       {topping.name}

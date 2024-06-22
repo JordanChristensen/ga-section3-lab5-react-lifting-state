@@ -4,6 +4,7 @@ const Ingredient = ({ ingredient, handleAddTopping }) => {
   const style = {
     backgroundColor: ingredient.color,
   };
+  
   return (
     <li style={style}>
       {ingredient.name}

@@ -1,30 +1,16 @@
-export const addTopping = (
-  ingredientToAdd,
-  burgerToppings,
-  setBurgerToppings
-) => {
-  // console.log(ingredientToAdd);
-  //
-  //
-  //
-  // -----------> WORKING below HERE ----------------
-  //
-  // ingredientToAdd.Properties needs to be assigned to topping.Properties?
-  //
-  setBurgerToppings([...burgerToppings, { ingredientToAdd }]);
-  // console.log(burgerToppings);
-};
+export function addTopping(topping, burgerToppings, setBurgerToppings) {
+  setBurgerToppings([...burgerToppings, { ...topping }]);
+}
 
-export const removeTopping = (
+export function removeTopping(
   ingredientToRemove,
   burgerToppings,
-  setBurgerToppings,
-  availableIngredients,
-  setAvailableIngredients
-) => {
+  setBurgerToppings
+) {
   const updatedBurgerToppings = burgerToppings.filter(
-    (ingredient) => ingredient._id !== ingredientToRemove._id
+    // (ingredient) => ingredient._id !== ingredientToRemove._id
+    (ingredient) => console.log(ingredient)
   );
-  setBurgerToppings(updatedBurgerToppings);
-  setAvailableIngredients([...availableIngredients, ingredientToRemove]);
-};
+  // console.log(updatedBurgerToppings);
+  setBurgerToppings([updatedBurgerToppings]);
+}

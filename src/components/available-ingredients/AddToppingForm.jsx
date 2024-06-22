@@ -1,11 +1,6 @@
-const AddToppingForm = ({ ingredient, handleAddTopping }) => {
-  const handleSubmit = () => {
-    // console.log(`${ingredient.name} has the ID# ${ingredient._id}`);
+export default function AddToppingForm({ ingredient, handleAddTopping }) {
+  function handleSubmit() {
     handleAddTopping(ingredient);
-  };
-  return (
-    <button onClick={(ingredient) => handleSubmit(ingredient)}>&#43;</button>
-  );
-};
-
-export default AddToppingForm;
+  }
+  return <button onClick={() => handleSubmit(ingredient)}>&#43;</button>;
+}

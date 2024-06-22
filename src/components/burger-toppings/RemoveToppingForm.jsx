@@ -1,9 +1,7 @@
-const RemoveToppingForm = ({ topping, handleRemoveTopping }) => {
-  const handleSubmit = () => {
-    console.log(`${topping.name} has the ID# ${topping._id}`);
+export default function RemoveToppingForm({ topping, handleRemoveTopping }) {
+  function handleSubmit() {
+    // console.log(topping);
     handleRemoveTopping(topping);
-  };
-  return <button onClick={(topping) => handleSubmit(topping)}>&#88;</button>;
-};
-
-export default RemoveToppingForm;
+  }
+  return <button onClick={() => handleSubmit(topping)}>&#88;</button>;
+}
