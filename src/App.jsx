@@ -6,23 +6,15 @@ import AvailableIngredients from "./components/available-ingredients/AvailableIn
 import { ingredientsData } from "./data/ingredientsData";
 
 const App = () => {
-  const [availableIngredients, setAvailableIngredients] =
-    useState(ingredientsData);
+  const availableIngredients = ingredientsData;
   const [burgerToppings, setBurgerToppings] = useState([]);
 
   function handleAddTopping(ingredientToAdd) {
     addTopping(ingredientToAdd, burgerToppings, setBurgerToppings);
   }
 
-  // review naming of all
   function handleRemoveTopping(ingredientToRemove) {
-    removeTopping(
-      ingredientToRemove,
-      burgerToppings,
-      setBurgerToppings,
-      availableIngredients,
-      setAvailableIngredients
-    );
+    removeTopping(ingredientToRemove, burgerToppings, setBurgerToppings);
   }
 
   return (
@@ -35,7 +27,7 @@ const App = () => {
         />
         <BurgerToppings
           burgerToppings={burgerToppings}
-          handleRemoveBurgerTopping={handleRemoveTopping}
+          handleRemoveTopping={handleRemoveTopping}
         />
       </section>
     </main>

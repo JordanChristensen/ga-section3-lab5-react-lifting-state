@@ -4,12 +4,12 @@ const Topping = ({ topping, handleRemoveTopping }) => {
   const style = {
     backgroundColor: topping.color,
   };
-  // console.log(topping);
+
   return (
     <li style={style}>
       {topping.name}
       <RemoveToppingForm
-        handleAddTopping={handleRemoveTopping}
+        handleRemoveTopping={handleRemoveTopping}
         topping={topping}
       />
     </li>
