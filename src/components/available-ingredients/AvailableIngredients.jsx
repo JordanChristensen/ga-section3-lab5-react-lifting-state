@@ -1,6 +1,9 @@
 import Ingredient from "./Ingredient";
 
-const AvailableIngredients = ({ availableIngredients, handleAddTopping }) => {
+export default function AvailableIngredients({
+  availableIngredients,
+  handleAddTopping,
+}) {
   return (
     <section id="available-ingredients">
       <h2>Available ingredients</h2>
@@ -19,6 +22,4 @@ const AvailableIngredients = ({ availableIngredients, handleAddTopping }) => {
       )}
     </section>
   );
-};
-
-export default AvailableIngredients;
+}

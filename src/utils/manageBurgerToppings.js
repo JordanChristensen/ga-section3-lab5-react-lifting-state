@@ -5,8 +5,6 @@ export async function addTopping(topping, burgerToppings, setBurgerToppings) {
     );
     if (!exists) {
       await setBurgerToppings([...burgerToppings, { ...topping }]);
-    } else {
-      console.log("Item already exists");
     }
   } catch (addToppingError) {
     console.log(

@@ -1,6 +1,9 @@
 import Topping from "./Topping";
 
-const BurgerToppings = ({ burgerToppings, handleRemoveTopping }) => {
+export default function BurgerToppings({
+  burgerToppings,
+  handleRemoveTopping,
+}) {
   return (
     <section id="burger-toppings">
       <h2>Burger toppings</h2>
@@ -19,6 +22,4 @@ const BurgerToppings = ({ burgerToppings, handleRemoveTopping }) => {
       )}
     </section>
   );
-};
-
-export default BurgerToppings;
+}

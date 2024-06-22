@@ -5,7 +5,7 @@ import BurgerToppings from "./components/burger-toppings/BurgerToppings";
 import AvailableIngredients from "./components/available-ingredients/AvailableIngredients";
 import { ingredientsData } from "./data/ingredientsData";
 
-const App = () => {
+export default function App() {
   const availableIngredients = ingredientsData;
   const [burgerToppings, setBurgerToppings] = useState([]);
 
@@ -32,6 +32,4 @@ const App = () => {
       </section>
     </main>
   );
-};
-
-export default App;
+}
