@@ -1,17 +1,35 @@
-export function addTopping(topping, burgerToppings, setBurgerToppings) {
-  // ----> IF(burgerToppings already contains topping, don't add duplicate items)
-  setBurgerToppings([...burgerToppings, { ...topping }]);
+export async function addTopping(topping, burgerToppings, setBurgerToppings) {
+  try {
+    const exists = burgerToppings.some(
+      (burgerTopping) => burgerTopping._id === topping._id
+    );
+    if (!exists) {
+      await setBurgerToppings([...burgerToppings, { ...topping }]);
+    } else {
+      console.log("Item already exists");
+    }
+  } catch (addToppingError) {
+    console.log(
+      `Error when sending adding ${topping} to burger ----->`,
+      addToppingError
+    );
+  }
 }
 
-export function removeTopping(
+export async function removeTopping(
   ingredientToRemove,
   burgerToppings,
   setBurgerToppings
 ) {
-  const updatedBurgerToppings = burgerToppings.filter(
-    // also need to REMOVE the <Topping> component to prevent React DOM error
-    (ingredient) => ingredient._id !== ingredientToRemove._id
-  );
-  console.log(updatedBurgerToppings);
-  setBurgerToppings([updatedBurgerToppings]);
+  try {
+    const updatedBurgerToppings = burgerToppings.filter(
+      (ingredient) => ingredient._id !== ingredientToRemove._id
+    );
+    await setBurgerToppings([...updatedBurgerToppings]);
+  } catch (removeToppingError) {
+    console.log(
+      `Error when sending removing ${ingredientToRemove} from burger ----->`,
+      removeToppingError
+    );
+  }
 }
