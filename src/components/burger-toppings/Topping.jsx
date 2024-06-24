@@ -1,5 +1,3 @@
-import RemoveToppingForm from "./RemoveToppingForm";
-
 export default function Topping({ topping, handleRemoveTopping }) {
   const style = {
     backgroundColor: topping.color,
@@ -8,10 +6,7 @@ export default function Topping({ topping, handleRemoveTopping }) {
   return (
     <li style={style}>
       {topping.name}
-      <RemoveToppingForm
-        handleRemoveTopping={handleRemoveTopping}
-        topping={topping}
-      />
+      <button onClick={() => handleRemoveTopping(topping)}>&#88;</button>
     </li>
   );
 }

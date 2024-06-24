@@ -1,5 +1,3 @@
-import AddToppingForm from "./AddToppingForm";
-
 export default function Ingredient({ ingredient, handleAddTopping }) {
   const style = {
     backgroundColor: ingredient.color,
@@ -8,10 +6,7 @@ export default function Ingredient({ ingredient, handleAddTopping }) {
   return (
     <li style={style}>
       {ingredient.name}
-      <AddToppingForm
-        handleAddTopping={handleAddTopping}
-        ingredient={ingredient}
-      />
+      <button onClick={() => handleAddTopping(ingredient)}>&#43;</button>
     </li>
   );
 }
