@@ -17,17 +17,19 @@ export default function BurgerShack() {
     removeTopping(ingredientToRemove, burgerToppings, setBurgerToppings);
   }
 
-  <main>
-    <h1>Burger shack</h1>
-    <section id="burger-customizer">
-      <AvailableIngredients
-        availableIngredients={availableIngredients}
-        handleAddTopping={handleAddTopping}
-      />
-      <BurgerToppings
-        burgerToppings={burgerToppings}
-        handleRemoveTopping={handleRemoveTopping}
-      />
-    </section>
-  </main>;
+  return (
+    <main>
+      <h1>Burger shack</h1>
+      <section id="burger-customizer">
+        <AvailableIngredients
+          availableIngredients={availableIngredients}
+          handleAddTopping={handleAddTopping}
+        />
+        <BurgerToppings
+          burgerToppings={burgerToppings}
+          handleRemoveTopping={handleRemoveTopping}
+        />
+      </section>
+    </main>
+  );
 }
